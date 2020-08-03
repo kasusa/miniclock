@@ -1,0 +1,13 @@
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\miniclock.exe.config
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\miniclock.exe.manifest
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\miniclock.application
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\miniclock.exe
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\miniclock.pdb
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.Form1.resources
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.Properties.Resources.resources
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.csproj.GenerateResource.cache
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.csproj.CoreCompileInputs.cache
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.exe.manifest
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.application
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.exe
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.pdb
