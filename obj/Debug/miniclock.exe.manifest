@@ -42,24 +42,36 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="miniclock.exe" size="18344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="miniclock.exe" size="19880">
       <assemblyIdentity name="miniclock" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Jl9avg1SctZQEMZgJTuIkygIjOHdNaVcaC7C0FKKeAU=</dsig:DigestValue>
+        <dsig:DigestValue>kJ9uJLSKTcYBKS6EhROcYCmxq1h5NzxEuaRwt6J8YkE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="miniclock.exe.config" size="189">
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="miniclock.exe.config" size="1179">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>0MNX8pj1kvmWvF3Dtg2EY2oZdFugQbYhPrRL0siuwc0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

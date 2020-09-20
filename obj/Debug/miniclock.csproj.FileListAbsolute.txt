@@ -11,3 +11,7 @@ C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.exe.manifes
 C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.application
 C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.exe
 C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.pdb
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.csprojAssemblyReference.cache
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.csproj.CopyComplete
