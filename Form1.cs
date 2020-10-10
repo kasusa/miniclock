@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace miniclock
 {
+
     public partial class Form1 : Form
     {
         LinkedList<Color> colors = new LinkedList<Color>();
@@ -73,7 +74,7 @@ namespace miniclock
             contextMenuStrip1.Show(Cursor.Position);//在鼠标位置显示一个菜单
         }
 
-        //菜单中的关闭按钮
+        //close button
         private void aDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //https://www.youtube.com/watch?v=P432z8q9iVE 关于存储设置的教程
@@ -81,7 +82,7 @@ namespace miniclock
             this.Close();
         }
 
-
+        //next theme button
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //更换文字颜色
@@ -96,8 +97,10 @@ namespace miniclock
             //随机的时候使用的范围是0~color的长度
 
             Settings.Default.theme_color = foreColoNext; //存储一下
+            Settings.Default.Save();
         }
 
+        //hacker style button
         private void hacker_styleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //我称之为骇客模式,其实就是把背景颜色变成纯黑
@@ -111,21 +114,25 @@ namespace miniclock
                 label1.BackColor = defbackground;
                 Settings.Default.hacker_style = false; //存储一下
             }
-
+            Settings.Default.Save();
         }
-
+        //position -topleft
         private void topLeftToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Location = new Point(-3, -1);//显示在zuo上角
             Settings.Default.position=1 ;        //位置 0--top right , 1--top left
+            Settings.Default.Save();
         }
 
+        //position -topright
         private void topRightToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Location = new Point(Screen.PrimaryScreen.Bounds.Right - mactype_w, -1);//显示在右上角
             Settings.Default.position = 0;        //位置 0--top right , 1--top left
+            Settings.Default.Save();
         }
 
+        //help
         private void biggersizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("" +
@@ -137,7 +144,20 @@ namespace miniclock
                 "And then restart the application.");
         }
 
-
+        //新增了不显示在 alt tab 菜单和 Taskbar的代码(话说原来就不显示在taskbar,但是忘记自己在哪里设置得了)
+        //让 alttab菜单更加不杂乱一些.
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int WS_EX_APPWINDOW = 0x40000;
+                const int WS_EX_TOOLWINDOW = 0x80;
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle &= (~WS_EX_APPWINDOW);    // 不显示在TaskBar
+                cp.ExStyle |= WS_EX_TOOLWINDOW;      // 不显示在Alt+Tab
+                return cp;
+            }
+        }
 
 
     }
