@@ -13,24 +13,23 @@ namespace miniclock
     public partial class Form1 : Form
     {
         LinkedList<Color> colors = new LinkedList<Color>();
-
+        int Twidth = 50; //发现在不同dpi下有显示不全的问题。所以弄一个这个，要改成可以调节的。
 
         Color defbackground;
         Color transparent = Color.Navy;
         int mactype_w = 50; //这个变量是用来治疗mactype导致自己渲染之后显示不全的问题的
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Twidth = Settings.Default.width;
+            label1.Width = Twidth;
             int position = Settings.Default.position;        //位置 0--top right , 1--top left
             if (position==1)
             {
                 topLeftToolStripMenuItem.PerformClick();
             }
-            label1.ForeColor = Settings.Default.theme_color; //文本颜色
-            if (Settings.Default.hacker_style)
-            {
-                hacker_styleToolStripMenuItem.PerformClick();//黑色底色
-            }
+            
+            Load_hacker_style();//恢复底色
+            label1.ForeColor = Settings.Default.theme_color; //恢复文本颜色
         }
 
         public Form1()
@@ -47,7 +46,7 @@ namespace miniclock
 
             this.ShowInTaskbar = false;//这个程序将不会显示在任务栏
             InitializeComponent();
-            defbackground = label1.BackColor; //保存一下初始的那个背景颜色，因为打字打不出来
+            defbackground = Color.WhiteSmoke; //保存一下初始的那个背景颜色，因为打字打不出来
 
             timer1.Interval = 10000; //10s one tick timer
             timer1.Tick += new EventHandler(gettime); //ontick event
@@ -55,7 +54,7 @@ namespace miniclock
             label1.Text = System.DateTime.Now.ToShortTimeString(); // init time
 
 
-            this.Width = 55;
+            this.Width = 99;
             this.Height = 18;
             this.Location = new Point(Screen.PrimaryScreen.Bounds.Right - mactype_w, -1);//显示在右上角
         }
@@ -99,19 +98,42 @@ namespace miniclock
             Settings.Default.theme_color = foreColoNext; //存储一下
             Settings.Default.Save();
         }
+        //load hacker style function
+        private void Load_hacker_style()
+        {
+            if (Settings.Default.hacker_style == true)
+            {
+                label1.BackColor = Color.Black;
+                label1.ForeColor = Settings.Default.theme_color; //文本颜色
 
-        //hacker style button
+                Settings.Default.hacker_style = true; //存储一下
+            }
+
+            if (Settings.Default.hacker_style == false)
+            {
+                label1.BackColor = defbackground;
+                label1.ForeColor = Color.Black;
+                Settings.Default.hacker_style = false; //存储一下
+            }
+        }
+        //change hacker style button
         private void hacker_styleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //我称之为骇客模式,其实就是把背景颜色变成纯黑
-            if (label1.BackColor!= Color.Black)
+            if (Settings.Default.hacker_style==false)
             {
                 label1.BackColor = Color.Black;
+                label1.ForeColor = Color.White; //文本颜色
+                Settings.Default.theme_color = Color.White;
+
                 Settings.Default.hacker_style = true; //存储一下
             }
-            else
+
+            else if (Settings.Default.hacker_style==true)
             {
                 label1.BackColor = defbackground;
+                label1.ForeColor = Color.Black;
+                Settings.Default.theme_color = Color.Black;
                 Settings.Default.hacker_style = false; //存储一下
             }
             Settings.Default.Save();
@@ -158,7 +180,30 @@ namespace miniclock
                 return cp;
             }
         }
+        //width -
+        private void widthSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Width <= 400)
+            {
+                Twidth -= 2;
 
+                label1.Width = Twidth;
+            }
+            Settings.Default.width = Twidth;        //位置 0--top right , 1--top left
+            Settings.Default.Save();
+        }
 
+        //width +
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (Width >= 10)
+            {
+                Twidth += 2;
+
+                label1.Width = Twidth;
+            }
+            Settings.Default.width = Twidth;        //位置 0--top right , 1--top left
+            Settings.Default.Save();
+        }
     }
 }
