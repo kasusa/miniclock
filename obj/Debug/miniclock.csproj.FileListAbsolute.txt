@@ -15,4 +15,3 @@ C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.csprojAssem
 C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\Newtonsoft.Json.dll
 C:\Users\kasusa\source\repos\miniclock\miniclock\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.csproj.CopyComplete
-C:\Users\kasusa\source\repos\miniclock\miniclock\obj\Debug\miniclock.width_control.resources

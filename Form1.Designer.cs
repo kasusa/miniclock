@@ -93,7 +93,7 @@
             this.hacker_styleToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.AliceBlue;
             this.hacker_styleToolStripMenuItem.Name = "hacker_styleToolStripMenuItem";
             this.hacker_styleToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.hacker_styleToolStripMenuItem.Text = "&hacker_style";
+            this.hacker_styleToolStripMenuItem.Text = "&style";
             this.hacker_styleToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.hacker_styleToolStripMenuItem.Click += new System.EventHandler(this.hacker_styleToolStripMenuItem_Click);
             // 
@@ -110,14 +110,14 @@
             // topLeftToolStripMenuItem
             // 
             this.topLeftToolStripMenuItem.Name = "topLeftToolStripMenuItem";
-            this.topLeftToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.topLeftToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.topLeftToolStripMenuItem.Text = "top &left";
             this.topLeftToolStripMenuItem.Click += new System.EventHandler(this.topLeftToolStripMenuItem_Click);
             // 
             // topRightToolStripMenuItem
             // 
             this.topRightToolStripMenuItem.Name = "topRightToolStripMenuItem";
-            this.topRightToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.topRightToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.topRightToolStripMenuItem.Text = "top &right";
             this.topRightToolStripMenuItem.Click += new System.EventHandler(this.topRightToolStripMenuItem_Click);
             // 

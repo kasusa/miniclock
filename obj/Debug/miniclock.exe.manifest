@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="miniclock.exe" size="21928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="miniclock.exe" size="20904">
       <assemblyIdentity name="miniclock" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7pWiUrq5uG8WFYroMo4ko77nDqBcgHGLNFu70t8ye6I=</dsig:DigestValue>
+        <dsig:DigestValue>lM1hM+ByzmlXzH3+4RETkTb66ympmJIlRIBe34pyQUg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

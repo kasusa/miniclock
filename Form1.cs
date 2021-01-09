@@ -158,12 +158,11 @@ namespace miniclock
         private void biggersizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("" +
-                "假如时间显示不全，请调整你的DPI设置\n"+
+                "假如时间显示不清晰，请调整你的DPI设置，\n如果时间显示不全或者框体太长，请调整框体宽度（单击菜单中）\n"+
                 "属性-兼容性-更改高dpI设置-高DPI缩放执行-应用程序\n" +
                 "然后重新启动应用\n---------\n" +
-                "If the time display is incomplete, adjust your DPI Settings \n" +
-                "Attribute - compatibility - change high dpI Settings - high dpI zoom ,select application \n" +
-                "And then restart the application.");
+                "If the time display is blurry, manually adjust your DPI Settings \n"+
+                "If time is not showing completely , left click and adjust the width");
         }
 
         //新增了不显示在 alt tab 菜单和 Taskbar的代码(话说原来就不显示在taskbar,但是忘记自己在哪里设置得了)
